@@ -13,7 +13,7 @@ const sizes = {
 }
 
 const camera = new THREE.PerspectiveCamera(75, sizes.width / sizes.height, 0.1, 50);
-camera.position.set(0,26,6);
+camera.position.set(0,24,6);
 scene.add(camera);
 
 const renderer = new THREE.WebGLRenderer({
@@ -35,7 +35,7 @@ window.addEventListener('resize', () => {
 });
 
 const controls = new OrbitControls(camera, canvas);
-controls.target.set(0,26,0);
+controls.target.set(0,24,0);
 controls.enableDamping = true;
 controls.dampingFactor = 0.1;
 controls.maxDistance = 7;
@@ -202,8 +202,8 @@ function updateZoom() {
   const ar = sizes.width / sizes.height;
   if(ar < 1){
     controls.maxDistance = 6 / ar;
-    controls.target.set(0, 26 - (6 * ar), 0);
+    controls.target.set(0, 24 - (6 * ar), 0);
     camera.position.z = 6 / ar;
-    camera.position.y = 26 - (6 * ar);
+    camera.position.y = 24 - (6 * ar);
   }
 }
