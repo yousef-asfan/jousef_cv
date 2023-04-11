@@ -48,7 +48,7 @@ controls.mouseButtons = {
 }
 controls.touches = {
 	ONE: THREE.TOUCH.PAN,
-	TWO: ''
+	TWO: THREE.TOUCH.DOLLY_ROTATE
 }
 
 updateZoom();
